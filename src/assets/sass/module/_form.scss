@@ -1,0 +1,73 @@
+/* form */
+.map-form {
+    position: absolute;
+    top: -65px;
+    right: 110px;
+    width: 570px;
+    background-color: $form-bg-color;
+    padding: 140px 50px;
+
+    @include desktop {
+        width: 400px;
+        right: 50px;
+        padding: 100px 35px;
+    }
+
+    @include tablet {
+        position: inherit;
+        margin-top: 50px;
+        width: 100%;
+    }
+
+    @include all-phone {
+        position: inherit;
+        margin-top: 50px;
+        width: 100%;
+    }
+
+    @include screen-360 {
+        position: inherit;
+        margin-top: 50px;
+        width: 100%;
+        padding: 25px 30px;
+    }
+
+    h4 {
+        color: $white-color;
+        margin-bottom: 50px;
+    }
+}
+form {
+    .primary-btn{
+        font-size: 18px;
+        border: 0;
+        margin-top: 60px;
+    }
+    textarea {
+        background-color: transparent;
+        border: 0;
+        width: 100%;
+        border-bottom: 1px solid $white-color;
+
+        &::placeholder {
+            color: $white-color;
+            font-size: 16px;
+            font-weight: 500;
+        }
+    }
+
+    input {
+        background-color: transparent;
+        border: 0;
+        border-bottom: 1px solid $white-color;
+        height: 55px;
+        margin-bottom: 52px;
+        width: 100%;
+
+        &::placeholder {
+            color: $white-color;
+            font-size: 16px;
+            font-weight: 500;
+        }
+    }
+}

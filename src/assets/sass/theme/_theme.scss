@@ -1,0 +1,731 @@
+/* theme */
+.menu-area {
+    padding: 30px 0;
+    position: absolute;
+    width: 100%;
+    height: auto;
+    background-color: transparent;
+    z-index: 1;
+}
+
+
+.hero-section {
+    background-image: url('../images/hero_gradient.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 300px 0 350px;
+    position: relative;
+
+    .hero-vector2 {
+        position: absolute;
+        height: 535px;
+        width: 570px;
+        right: 10%;
+        top: 25%;
+
+        @include screen-1400 {
+            height: 400px;
+            width: 400px;
+            top: 30%;
+            right: 10%;
+        }
+
+        @include screen-1200 {
+            height: 400px;
+            width: 400px;
+            top: 30%;
+            right: 5%;
+        }
+
+        @include desktop {
+            height: 300px;
+            width: 300px;
+            top: 30%;
+            right: 5%;
+        }
+
+        @include tablet {
+            height: 200px;
+            width: 200px;
+            top: 25%;
+            right: 5%;
+        }
+
+        @include all-phone {
+            height: 200px;
+            width: 200px;
+            top: 35%;
+            right: 1%;
+        }
+    }
+
+    .hero-vector3 {
+        position: absolute;
+        height: 150px;
+        width: 150px;
+        left: 10%;
+        top: 60%;
+
+        @include screen-1400 {
+            height: 150px;
+            width: 150px;
+            top: 60%;
+            left: 10%;
+        }
+
+        @include screen-1200 {
+            height: 150px;
+            width: 150px;
+            top: 60%;
+            left: 10%;
+        }
+
+        @include desktop {
+            height: 150px;
+            width: 150px;
+            top: 60%;
+            left: 5%;
+        }
+
+        @include tablet {
+            height: 150px;
+            width: 150px;
+            top: 60%;
+            left: 5%;
+        }
+
+        @include all-phone {
+            height: 120px;
+            width: 120px;
+            top: 60%;
+            left: 5%;
+        }
+
+        @include screen-360 {
+            height: 100px;
+            width: 100px;
+            top: 70%;
+            left: 0%;
+        }
+    }
+
+    .hero-vector4 {
+        position: absolute;
+        height: 80px;
+        width: 85px;
+        left: 25%;
+        top: 20%;
+
+        @include screen-1400 {
+            height: 80px;
+            width: 85px;
+            top: 30%;
+            left: 19%;
+        }
+
+        @include screen-1200 {
+            height: 80px;
+            width: 85px;
+            top: 30%;
+            left: 20%;
+        }
+
+        @include desktop {
+            height: 80px;
+            width: 85px;
+            top: 30%;
+            left: 5%;
+        }
+
+        @include tablet {
+            height: 80px;
+            width: 85px;
+            top: 20%;
+            left: 7%;
+        }
+
+        @include all-phone {
+            height: 80px;
+            width: 85px;
+            top: 20%;
+            left: 7%;
+        }
+
+        @include screen-360 {
+            height: 80px;
+            width: 85px;
+            top: 10%;
+            left: 0%;
+        }
+    }
+
+    @include tablet {
+        padding: 200px 0 350px;
+    }
+
+    @include all-phone {
+        padding: 200px 0 350px;
+    }
+
+    @include screen-360 {
+        padding: 120px 0 350px;
+    }
+
+    .hero-contant {
+        text-align: center;
+
+        @include screen-360 {
+            text-align: start;
+        }
+
+        .solutions {
+            padding: 0 4px;
+            background-color: $primary-color;
+            color: $white-color;
+        }
+
+        h1 {
+            @include screen-360 {
+                margin-bottom: 20px;
+            }
+        }
+
+        .hero-paragraph {
+            width: 80%;
+            margin: 30px auto;
+
+            @include screen-360 {
+                margin: 0;
+            }
+        }
+
+        .hero-bottom {
+            display: flex;
+            justify-content: center;
+
+            @include screen-360 {
+                justify-content: start;
+                margin-top: 20px;
+            }
+
+            span {
+                margin-right: 10px;
+                color: $primary-color;
+                font-weight: 600;
+            }
+
+            .hero-icon {
+                display: flex;
+
+                li {
+                    margin-right: 20px;
+
+                    a {
+                        color: $paragraph-color;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.hero-bottom-img {
+    margin-top: -289px;
+    position: relative;
+}
+
+.about-section {
+    @include screen-360 {
+        padding-top: 135px;
+    }
+
+    .about-img {
+        @include tablet {
+            margin-top: 60px;
+        }
+
+        @include all-phone {
+            margin-top: 50px;
+        }
+    }
+}
+
+.services-section {
+    .services-img {
+        @include tablet {
+            margin-bottom: 60px;
+        }
+
+        @include all-phone {
+            margin-bottom: 50px;
+        }
+    }
+}
+
+
+// shared style
+.section-title {
+    text-align: center;
+
+    @include screen-360 {
+        margin-bottom: 35px;
+    }
+
+    span {
+        color: $primary-color;
+        font-weight: 600;
+    }
+
+}
+
+.left-right-shared {
+    .left-right-shared-bottom {
+        display: flex;
+        margin-top: 28px;
+
+        .sape {
+            margin-right: 18px;
+            line-height: 32px;
+            height: 32px;
+            text-align: center;
+            width: 32px;
+            border-radius: 50%;
+            background-color: $background-color;
+
+            span {
+                color: $primary-color;
+            }
+        }
+
+        .bg-sape {
+            width: 120px;
+            height: 120px;
+            line-height: 120px;
+            text-align: center;
+            margin-right: 18px;
+            background-image: url('../images/Vector1.png');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 100%;
+
+            a {
+                span {
+                    color: $white-color;
+                    font-size: 25px;
+                }
+            }
+        }
+    }
+
+    .left-right-shared-persent {
+        display: flex;
+
+        @include landscape-phone {
+            margin-top: 15px;
+        }
+
+        .left-right-shared-bottom-icon {
+            a {
+                span {
+                    font-size: 60px;
+                }
+            }
+        }
+
+    }
+}
+
+// end shared style
+
+.business-section {
+
+    .left-right-shared-persent {
+        @include screen-360 {
+            margin-top: 15px;
+        }
+
+        .left-right-shared-bottom2 {
+            margin-right: 35px;
+            display: flex;
+            align-items: center;
+
+            @include screen-360 {
+                margin-right: 0;
+            }
+
+            .left-right-shared-bottom-icon {
+                margin-right: 14px;
+            }
+        }
+    }
+
+    .business-img {
+        @include tablet {
+            margin-top: 80px;
+        }
+
+        @include all-phone {
+            margin-top: 50px;
+        }
+    }
+}
+
+.portfolio-section {
+    background-image: url('../images/bg-gradeant2.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+
+    .protfolio-shape {
+        width: 88px;
+        height: 95px;
+        position: absolute;
+        right: 20%;
+        top: -50px;
+    }
+}
+
+.single-protfolio-part {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+
+    @include screen-360 {
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    .single-protfolio-img {
+        position: relative;
+
+        img {
+            width: 170px;
+            height: 150px;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: $primary-color-opacity;
+            opacity: 0;
+            visibility: hidden;
+            transition: $transition;
+
+            span {
+                color: $white-color;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translateX(-50%) translateY(-50%);
+            }
+        }
+
+        &:hover {
+            .overlay {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+    }
+
+    .single-protfolio-content {
+        margin-left: 30px;
+
+        @include screen-360 {
+            margin-left: 0;
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        .protfolio-link {
+            h6 {
+                color: $paragraph-color;
+
+                &:hover {
+                    color: $primary-color;
+                    transition: $transition;
+                    cursor: pointer;
+                }
+            }
+        }
+
+    }
+
+    .primary-btn {
+        font-size: 14px;
+        padding: 5px 18px;
+    }
+}
+
+.experience-section {
+
+    .expreance-year {
+        h4 {
+            color: $primary-color;
+        }
+
+        @include tablet {
+            margin-bottom: 10px;
+        }
+
+        @include all-phone {
+            margin-bottom: 10px;
+        }
+    }
+
+    .expreance-border {
+        border-top: 1px solid $paragraph-color;
+        border-bottom: 1px solid $paragraph-color;
+        padding: 40px 0 40px 30px;
+
+        @include tablet {
+            border: 0;
+            padding: 0;
+        }
+
+        @include all-phone {
+            border: 0;
+            padding: 0;
+        }
+    }
+
+    .expreance-year-middle {
+        @include tablet {
+            padding: 0;
+        }
+
+        @include all-phone {
+            padding: 0;
+        }
+    }
+
+    .expreance-right {
+        padding-left: 30px;
+
+        @include tablet {
+            padding: 0;
+        }
+
+        @include all-phone {
+            padding: 0;
+        }
+    }
+}
+
+//testimonial style
+.testimonial-section {
+    .testimonial-img {
+        position: relative;
+
+        .counter1 {
+            position: absolute;
+            display: flex;
+            border-radius: 10px;
+            padding: 20px 34px;
+            background-color: $white-color;
+            opacity: 0.7;
+            top: 30%;
+            left: 0;
+
+            @include desktop {
+                padding: 10px 15px;
+            }
+
+            @include screen-360 {
+                padding: 10px 15px;
+            }
+
+            .counter-icon {
+                height: 60px;
+                width: 60px;
+                line-height: 60px;
+                text-align: center;
+                background-color: $primary-color-shadow;
+                border-radius: 10px;
+                margin-right: 24px;
+
+                span {
+                    color: $primary-color;
+                }
+            }
+        }
+
+        .counter2 {
+            position: absolute;
+            display: flex;
+            padding: 20px 34px;
+            background-color: $white-color;
+            opacity: 0.8;
+            border-radius: 10px;
+            bottom: 0;
+            right: 0;
+
+            @include desktop {
+                padding: 10px 15px;
+            }
+
+            @include screen-360 {
+                padding: 10px 15px;
+            }
+
+            .counter-icon {
+                height: 60px;
+                width: 60px;
+                background-color: $primary-color-shadow;
+                border-radius: 10px;
+                line-height: 60px;
+                text-align: center;
+                margin-right: 24px;
+
+                span {
+                    color: $primary-color;
+                }
+            }
+        }
+    }
+}
+
+.tastimonial-slider {
+    @include all-phone {
+        margin-top: 80px;
+    }
+
+    @include tablet {
+        margin-top: 80px;
+    }
+
+    .tastimonial-single-slide {
+        .main-content {
+            line-height: 40px;
+            font-size: 20px;
+            font-weight: 400;
+
+            span {
+                margin: 0 19px 22px 0;
+            }
+        }
+
+        .tastimonial-bottom {
+            display: flex;
+            gap: 19px;
+
+            .sap {
+                margin-top: 13px;
+                width: 31px;
+                height: 2px;
+                background-color: $black-color;
+            }
+
+            .tastimonial-bottom-content {
+
+
+                p {
+                    margin-bottom: 0;
+                }
+
+                .star {
+                    span {
+                        color: $star-icon-color;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//end testimonial style
+
+// blog section style
+.single-blog {
+    font-family: "Poppins", sans-serif;
+    width: 95%;
+    border: 0;
+    border-radius: 0;
+    background-color: $white-color;
+
+    @include tablet {
+        margin-bottom: 80px;
+    }
+
+    @include all-phone {
+        margin-bottom: 50px;
+    }
+
+    .blog-img {
+        position: relative;
+
+        .blog-btn {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+    }
+
+    .blog-content {
+        margin-top: 30px;
+        padding: 0;
+
+        .title-link {
+            text-decoration: none;
+        }
+
+        .blog-title {
+            &:hover {
+                color: $primary-color;
+            }
+        }
+
+        .blog-date {
+            text-decoration: none;
+
+            span {
+                color: $primary-color;
+                transition: $transition;
+                font-weight: 500;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+
+        }
+
+        .blog-text {
+            border-top: 1px solid $paragraph-color;
+        }
+
+        .read-more {
+            color: $primary-color;
+            text-decoration: none;
+            font-weight: 600;
+
+            &:hover {
+                text-decoration: underline;
+                transition: $transition;
+            }
+        }
+    }
+
+    .primary-btn {
+        font-size: 14px;
+        padding: 12px 20px;
+    }
+}
+
+// map style
+.map-section {
+    position: relative;
+
+    iframe {
+        width: 100%;
+        height: 677px;
+    }
+}
+
+// end map style

@@ -1,0 +1,105 @@
+/* footer */
+
+.footer-section {
+    background-image: url('../images/bgimage.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+
+    .footer-shape {
+        width: 88px;
+        height: 95px;
+        position: absolute;
+        right: 20%;
+        top: -40px;
+
+        @include tablet {
+            top: -40px;
+        }
+    }
+
+    .footer-img {
+        @include tablet {
+            margin-bottom: 70px;
+        }
+
+        @include screen-360 {
+            margin-bottom: 50px;
+        }
+        @include landscape-phone {
+            margin-bottom: 50px;
+        }
+
+        img {
+            width: 144px;
+            height: 54px;
+        }
+
+        h2 {
+            color: $primary-color;
+            margin: 20px 0;
+            @include screen-360 {
+                font-size: 24px;
+                margin: 10px 0;
+            }
+            @include landscape-phone {
+                font-size: 24px;
+                margin: 10px 0;
+            }
+        }
+
+        .footer-icons {
+            display: flex;
+
+            li {
+                margin-right: 40px;
+                @include screen-360{
+                    margin-right: 20px;
+                }
+                a {
+                    color: $primary-color;
+
+                    span {
+                        font-size: 28px;
+                    }
+                }
+            }
+        }
+    }
+
+    .footer-address {
+        padding-right: 45px;
+        @extend .footer-contact;
+
+        @include tablet {
+            margin-bottom: 70px;
+        }
+
+        @include screen-360 {
+            margin-bottom: 50px;
+        }
+        @include landscape-phone {
+            margin-bottom: 50px;
+        }
+    }
+
+    .footer-contact {
+        h5 {
+            color: $primary-color;
+            margin-bottom: 10px;
+        }
+
+        span {
+            display: inline-block;
+            font-weight: 600;
+
+            @include screen-360 {
+                margin-top: 0;
+            }
+            @include landscape-phone {
+                margin-top: 0;
+            }
+        }
+    }
+}

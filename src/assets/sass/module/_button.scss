@@ -1,0 +1,14 @@
+/* button */
+.primary-btn {
+    padding: 16px 32px;
+    display: inline-block;
+    background-image: $gradient-color;
+    color: $white-color;    
+    font-size: 16px;
+    font-weight: 600;
+    transition: $transition;
+    &:hover {
+        color: $white-color;
+        opacity: .9;
+    }
+}
