@@ -1,25 +1,64 @@
 import { useEffect } from 'react';
-import img from '../../assets/images/logo.png'
-import vector2 from '../../assets/images/vector2.png'
-import vector3 from '../../assets/images/vector3.png'
-import vector4 from '../../assets/images/vector4.png'
-import illustration2 from '../../assets/images/illustration2.png'
-import illustration3 from '../../assets/images/illustration3.png'
-import illustration4 from '../../assets/images/illustration4.png'
-import illustration5 from '../../assets/images/illustration5.png'
-import image5 from '../../assets/images/image5.png'
-import image3 from '../../assets/images/image3.png'
-import image2 from '../../assets/images/image2.png'
-import image4 from '../../assets/images/image4.png'
-import image1 from '../../assets/images/image1.png'
-import image from '../../assets/images/image.png'
-import shape1 from '../../assets/images/shape1.png'
-import shapes1 from '../../assets/images/shapes1.png'
+import img from '../../assets/images/logo.png';
+import vector2 from '../../assets/images/vector2.png';
+import vector3 from '../../assets/images/vector3.png';
+import vector4 from '../../assets/images/vector4.png';
+import illustration2 from '../../assets/images/illustration2.png';
+import illustration3 from '../../assets/images/illustration3.png';
+import illustration4 from '../../assets/images/illustration4.png';
+import illustration5 from '../../assets/images/illustration5.png';
+import image5 from '../../assets/images/image5.png';
+import image3 from '../../assets/images/image3.png';
+import image2 from '../../assets/images/image2.png';
+import image4 from '../../assets/images/image4.png';
+import image1 from '../../assets/images/image1.png';
+import image from '../../assets/images/image.png';
+import shape1 from '../../assets/images/shape1.png';
+import shapes1 from '../../assets/images/shapes1.png';
+import image8 from '../../assets/images/image8.png';
+import image7 from '../../assets/images/image7.png';
+import image6 from '../../assets/images/image6.png';
+import logo2 from '../../assets/images/logo2.png';
 import WOW from 'wowjs';
-import $ from 'jquery';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import CountUp from 'react-countup';
 
+const slider = {
+    dots: false,
+    arrows: false,
+    infinite: false,
+    speed: 300,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    responsive: [
+        {
+            breakpoint: 1024,
+            settings: {
+                arrows: false,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                infinite: true,
+                dots: false
+            }
+        },
+        {
+            breakpoint: 600,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+            }
+        },
+        {
+            breakpoint: 480,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+            }
+        }
+    ]
+};
 
 export default function Home1() {
 
@@ -30,8 +69,6 @@ export default function Home1() {
                 offset: 100,
             }).init();
         };
-
-        
     }, []);
 
     return (
@@ -48,17 +85,17 @@ export default function Home1() {
                         <div className="col-lg-8 col-sm-8 col-6 d-none d-lg-block">
                             <nav id="mobile-menu">
                                 <ul className="main-menu">
-                                    <li className="has-submenu wow fadeInDown" data-wow-delay=".4s"><a href="#">home</a>
+                                    <li className="has-submenu wow fadeInDown" data-wow-delay=".4s"><a href="/">home</a>
                                         <ul className="submenu">
                                             <li><a href="index.html">home 01</a></li>
                                             <li><a href="home-2.html">home 02</a></li>
                                             <li><a href="home-3.html">home 03</a></li>
                                         </ul>
                                     </li>
-                                    <li className="wow fadeInDown" data-wow-delay=".6s"><a href="about.html">about</a></li>
-                                    <li className="wow fadeInDown" data-wow-delay=".8s"><a href="services.html">services</a></li>
-                                    <li className="wow fadeInDown" data-wow-delay="1s"><a href="blog.html">blog</a></li>
-                                    <li className="wow fadeInDown" data-wow-delay="1.2s"><a href="contact.html">contact</a></li>
+                                    <li className="wow fadeInDown" data-wow-delay=".6s"><a href="/about">about</a></li>
+                                    <li className="wow fadeInDown" data-wow-delay=".8s"><a href="/services">services</a></li>
+                                    <li className="wow fadeInDown" data-wow-delay="1s"><a href="/blog">blog</a></li>
+                                    <li className="wow fadeInDown" data-wow-delay="1.2s"><a href="/contact">contact</a></li>
                                 </ul>
                             </nav>
                         </div>
@@ -405,7 +442,7 @@ export default function Home1() {
             </section>
             {/* <!-- end Portfolio section --> */}
 
-            {/* <!-- Experiences section --> */}
+            {/* <!-- Experiences sectclassName=ion --> */}
             <section className="experience-section py-135">
                 <div className="container">
                     <div className="row wow fadeInUp" data-wow-delay=".2s">
@@ -490,7 +527,13 @@ export default function Home1() {
                                         <span><i className="fa-solid fa-calendar-days fa-2xl"></i></span>
                                     </div>
                                     <div className="counter-content">
-                                        <h4><span className="counter">100</span>+</h4>
+                                        <CountUp start={0} end={100} delay={1}>
+                                            {({ countUpRef }) => (
+                                                <div>
+                                                    <h4><span ref={countUpRef} className="counter">100</span>+</h4>
+                                                </div>
+                                            )}
+                                        </CountUp>
                                         <span>Corporate Clients</span>
                                     </div>
                                 </div>
@@ -499,14 +542,20 @@ export default function Home1() {
                                         <span><i className="fa-solid fa-award fa-2xl"></i></span>
                                     </div>
                                     <div className="counter-content">
-                                        <h4><span className="counter">80</span>+</h4>
+                                        <CountUp start={0} end={80} delay={1}>
+                                            {({ countUpRef }) => (
+                                                <div>
+                                                    <h4><span ref={countUpRef} className="counter"></span>+</h4>
+                                                </div>
+                                            )}
+                                        </CountUp>
                                         <span>Marketing Awards</span>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div className="col-lg-6 offset-lg-1">
-                            <div className="tastimonial-slider">
+                            <Slider className="tastimonial-slider" {...slider}>
                                 <div className="tastimonial-single-slide">
                                     <p className="main-content">
                                         <span><i className="fa-solid fa-quote-left"></i></span>
@@ -602,13 +651,154 @@ export default function Home1() {
                                             </div>
                                         </div>
                                     </div>
+                                </div>
+                            </Slider>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            {/* <!-- end Testimonial section --> */}
+
+            {/* <!-- map section --> */}
+            <section className="map-section pb-135">
+                <div className="container-fluid px-0">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d20648.23516736163!2d90.34787583008212!3d23.814090504521396!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c12705c24be9%3A0xd85f468cb5707b96!2sMirpur%206%2C%20Dhaka%201216!5e0!3m2!1sen!2sbd!4v1720081035488!5m2!1sen!2sbd"
+                        width="600" height="450" style={{ border: 0 }} allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+
+                    <div className="map-form">
+                        <h4>Get In Touch</h4>
+                        <form action="#">
+                            <input placeholder="Your Name" type="text" name="name" />
+                            <input placeholder="Your Email Address" type="email" name="email" />
+                            <input placeholder="Subject" type="text" name="subject" />
+                            <textarea name="message" placeholder="Message"></textarea>
+                            <button className="primary-btn">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+            {/* <!-- end map section --> */}
+
+            {/* <!-- blog section --> */}
+            <section className="blog-section py-135">
+                <div className="container">
+                    <div className="row wow fadeInUp" data-wow-delay=".2s">
+                        <div className="section-title mb-60">
+                            <span>Latest & Greatest</span>
+                            <h2>Blogs</h2>
+                        </div>
+                    </div>
+                    <div className="row">
+                        <div className="col-lg-4 wow fadeInUp" data-wow-delay=".2s">
+                            {/* <!-- Card1 --> */}
+                            <div className="single-blog">
+                                <div className="blog-img">
+                                    <img src={image6} className="card-img-top" alt="image" />
+                                    <div className="blog-btn">
+                                        <a href="#" className="primary-btn">Branding</a>
+                                    </div>
+                                </div>
+                                <div className="blog-content">
+                                    <a className="blog-date" href="#">
+                                        <span>April 01 , 2022</span>
+                                    </a>
+                                    <a href="#" className="title-link">
+                                        <h6 className="blog-title my-20">The best Marketing Strategy for every Company</h6>
+                                    </a>
+                                    <p className="blog-text pt-20">One may not need charts and graphs at this point to know that, in
+                                        the past couple of years especially, the buying and selling o...</p>
+                                    <a href="#" className="read-more">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-lg-4 wow fadeInUp" data-wow-delay=".4s">
+                            {/* <!-- Card1 --> */}
+                            <div className="single-blog">
+                                <div className="blog-img">
+                                    <img src={image7} className="card-img-top" alt="image" />
+                                    <div className="blog-btn">
+                                        <a href="#" className="primary-btn">Branding</a>
+                                    </div>
+                                </div>
+                                <div className="blog-content">
+                                    <a className="blog-date" href="#">
+                                        <span>April 01 , 2022</span>
+                                    </a>
+                                    <a href="#" className="title-link">
+                                        <h6 className="blog-title my-20">The best Marketing Strategy for every Company</h6>
+                                    </a>
+                                    <p className="blog-text pt-20">One may not need charts and graphs at this point to know that, in
+                                        the past couple of years especially, the buying and selling o...</p>
+                                    <a href="#" className="read-more">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-lg-4 wow fadeInUp" data-wow-delay=".6s">
+                            {/* <!-- Card1 --> */}
+                            <div className="single-blog">
+                                <div className="blog-img">
+                                    <img src={image8} className="card-img-top" alt="image" />
+                                    <div className="blog-btn">
+                                        <a href="#" className="primary-btn">Branding</a>
+                                    </div>
+                                </div>
+                                <div className="blog-content">
+                                    <a className="blog-date" href="#">
+                                        <span>April 01 , 2022</span>
+                                    </a>
+                                    <a href="#" className="title-link">
+                                        <h6 className="blog-title my-20">The best Marketing Strategy for every Company</h6>
+                                    </a>
+                                    <p className="blog-text pt-20">One may not need charts and graphs at this point to know that, in
+                                        the past couple of years especially, the buying and selling o...</p>
+                                    <a href="#" className="read-more">Read More</a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
-            {/* <!-- end Testimonial section --> */}
+            {/* <!-- end blog section --> */}
+
+            {/* <!-- footer section --> */}
+            <section className="footer-section py-135">
+                <img className="footer-shape item-rotate" src={shape1} alt="image" />
+                <div className="container">
+                    <div className="row">
+                        <div className="col-xl-6 col-lg-5">
+                            <div className="footer-img">
+                                <img src={logo2} alt="image" />
+                                <h2 className="">anderson@support.com</h2>
+                                <ul className="footer-icons">
+                                    <li><a href="#"><span><i className="fa-brands fa-twitter"></i></span></a></li>
+                                    <li><a href="#"><span><i className="fa-brands fa-dribbble"></i></span></a></li>
+                                    <li><a href="#"><span><i className="fa-brands fa-behance"></i></span></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div className="col-lg-3 offset-lg-1 offset-xl-0">
+                            <div className="footer-address">
+                                <h5>New York</h5>
+                                <span className="mt-10">523 Sylvan Ave, 5th Floor Mountain View, CA 94041USA</span>
+                                <h5 className="mt-20">Qubec</h5>
+                                <span>7140 Wehner Tunnel Washington, D.C</span>
+                            </div>
+                        </div>
+                        <div className="col-lg-3">
+                            <div className="footer-contact">
+                                <h5>Phone</h5>
+                                <span className="mt-10">+1 234 719 8948 <br /> +1 987 654 3210</span>
+                                <h5 className="mt-20">Mail</h5>
+                                <span>Interested to contact? anderson@support.com</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            {/* <!-- end footer section --> */}
         </>
     )
 }
