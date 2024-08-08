@@ -7,13 +7,13 @@ import './assets/css/magnific-popup.css';
 import './assets/css/meanmenu.css';
 import './assets/css/slick.css';
 import './assets/css/style.css';
-import Home1 from './Component/Home/Home1'
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import About from './Component/pages/About';
 import Services from './Component/pages/Services';
 import Blog from './Component/pages/Blog';
 import Contact from './Component/pages/Contact';
+import Home1 from './Component/Home/Home1';
 
 
 function App() {
